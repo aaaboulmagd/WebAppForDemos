@@ -24,5 +24,12 @@ jobs:
           # Password or personal access token used to log against the Docker registry
           password: ${{ secrets.ACR_PASSWORD }}
 
-      - name: ARC Push
-        run: docker push webappfordemo.azurecr.io/webappfordemo:latest #$(date +%s)
+    #  - name: ARC Push
+     #   run: docker push webappfordemo.azurecr.io/webappfordemo:latest #$(date +%s)
+      - name: Build and push
+        uses: docker/build-push-action@v3.0.0
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: webappfordemo.azurecr.io/webappfordemo:latest #$(date +%s)
