@@ -24,11 +24,11 @@ jobs:
           # Password or personal access token used to log against the Docker registry
           password: ${{ secrets.ACR_PASSWORD }}
       
-      - name: Set up Docker Buildx ###for building on multi archetecure
-        uses: docker/setup-buildx-action@v2.0.0
-    
+     # - name: Set up Docker Buildx ###for building on multi archetecure
+      #  uses: docker/setup-buildx-action@v2.0.0
+          
       - name: ARC Build
-        run: docker build -t webappfordemo:latest 
+        run: docker build ./Dockerfile 
       
       - name: ARC Push
         run: docker push webappfordemo:latest #$(date +%s)
