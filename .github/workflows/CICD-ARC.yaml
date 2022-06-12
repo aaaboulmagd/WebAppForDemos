@@ -27,8 +27,8 @@ jobs:
      # - name: Set up Docker Buildx ###for building on multi archetecure
       #  uses: docker/setup-buildx-action@v2.0.0
           
-      - name: ARC Build
-        run: docker build https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/toACR/Dockerfile?token=GHSAT0AAAAAABVLUPMYM744OKGW7EUJETGCYVGG4EA -t webappfordemo:latest
+      #- name: ARC Build
+       # run: docker build https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/toACR/Dockerfile?token=GHSAT0AAAAAABVLUPMYM744OKGW7EUJETGCYVGG4EA -t webappfordemo:latest
       
       - name: ARC Push
         run: docker push webappfordemo:latest #$(date +%s)
