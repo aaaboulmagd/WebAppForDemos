@@ -1,1 +1,26 @@
+name: Docker Image CI
 
+on:
+  push:
+    branches: [ "toACR" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docker Login
+        # You may pin to the exact commit or the version.
+        # uses: docker/login-action@49ed152c8eca782a232dede0303416e8f356c37b
+        uses: docker/login-action@v2.0.0
+        with:
+          # Server address of Docker registry. If not set then will default to Docker Hub
+          registry: webappfordemo.azurecr.io
+          # Username used to log against the Docker registry
+          username: ${{ secrets.ACR_USERNAME }}
+          # Password or personal access token used to log against the Docker registry
+          password: ${{ secrets.ACR_PASSWORD }}
+    
