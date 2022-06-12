@@ -33,8 +33,9 @@ jobs:
       #- name: ARC Push
        # run: docker push webappfordemo.azurecr.io/webappfordemo:latest #$(date +%s)
       - name: Build and push
-        uses: docker/build-push-action@v3.0.0
+        uses: docker/build-push-action@v2
         with:
+          registry: webappfordemo.azurecr.io
           context: .
           file: ./Dockerfile
           push: true
