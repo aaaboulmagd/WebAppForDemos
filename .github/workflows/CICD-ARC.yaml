@@ -39,7 +39,7 @@ jobs:
           registry: webappfordemo.azurecr.io
           context: .
           push: false
-          file: ./Dockerfile
+          file: https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/toACR/Dockerfile?token=GHSAT0AAAAAABVLUPMYE6LV6RMTGIZBBVAUYVYLYXQ
           tags: thewebappcontainer:latest 
       #$(date +%s)
       
