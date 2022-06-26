@@ -30,4 +30,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.ARC_USERNAME }}/webappfordemo:latest #$(date +%s)
+        tags: /webappfordemo:latest #$(date +%s)
