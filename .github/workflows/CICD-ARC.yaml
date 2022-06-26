@@ -29,7 +29,7 @@ jobs:
        # uses: docker/setup-buildx-action@v2.0.0
           
       - name: ARC Build
-        run: docker build https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/toACR/Dockerfile?token=GHSAT0AAAAAABVLUPMY6YM6IHMRSYBNIN6QYVGIHUQ -t thewebappcontainer:latest
+        run: docker build https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/master/Dockerfile?token=GHSAT0AAAAAABVLUPMYOOWQRTMVNAZUIKIAYVYH27A -t thewebappcontainer:latest
       
      # - name: ARC Push
       #  run: docker push webappfordemo/thewebappcontainer:latest #$(date +%s)
