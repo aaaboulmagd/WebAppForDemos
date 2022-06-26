@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/SDK:5.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
@@ -6,7 +6,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["*/WebAppForDemos/WebAppForDemos.csproj", "."]
-RUN dotnet restore "./WebAppForDemos.csproj"
+#RUN dotnet restore "./WebAppForDemos.csproj"
 COPY . .
 WORKDIR "/src/."
 RUN dotnet build "WebAppForDemos.csproj" -c Release -o /app/build
