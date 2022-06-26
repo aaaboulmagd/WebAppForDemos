@@ -27,10 +27,10 @@ jobs:
       run: docker build -t thewebappcontainer:latest .
       
     - name: Tagging Img
-      run: docker tag thewebappcontainer webappfordemo.azurecr.io/thewebappcontainer:latest
+      run: docker tag thewebappcontainer webappfordemo.azurecr.io/thewebappcontainer:$(date +%s)
       
     - name: ARC Push
-      run: docker push webappfordemo.azurecr.io/thewebappcontainer:latest #$(date +%s) |
+      run: docker push webappfordemo.azurecr.io/thewebappcontainer:$(date +%s)
       
    # - name: Build and push
     #  uses: docker/build-push-action@v3.0.0
