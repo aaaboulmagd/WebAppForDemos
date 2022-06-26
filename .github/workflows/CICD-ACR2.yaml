@@ -24,7 +24,8 @@ jobs:
     #- name: Set up Docker Buildx ###for building on multi archetecure
     #  uses: docker/setup-buildx-action@
     - name: Stright up Build
-      run: docker build ./Dockerfile -t thewebappcontainer:latest
+      run: docker build -t thewebappcontainer:latest .
+      
       
     #  - name: ARC Push
      #   run: docker push webappfordemo/thewebappcontainer:latest #$(date +%s)
