@@ -25,21 +25,22 @@ jobs:
           password: ${{ secrets.ACR_PASSWORD }}
     
         
-      #- name: Set up Docker Buildx ###for building on multi archetecure
-       # uses: docker/setup-buildx-action@v2.0.0
+      - name: Set up Docker Buildx ###for building on multi archetecure
+        uses: docker/setup-buildx-action@v2.0.0
           
-      - name: ARC Build
-        run: docker build https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/toACR/Dockerfile?token=GHSAT0AAAAAABVLUPMYUNGGRDNBDYMYTHREYVYJLEA -t thewebappcontainer:latest
+    #  - name: ARC Build
+     #   run: docker build https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/toACR/Dockerfile?token=GHSAT0AAAAAABVLUPMYUNGGRDNBDYMYTHREYVYJLEA -t thewebappcontainer:latest
       
-     # - name: ARC Push
-      #  run: docker push webappfordemo/thewebappcontainer:latest #$(date +%s)
-      #- name: Build and push
-       # uses: docker/build-push-action@v2
-        #with:
-        #  push: true
-        #  registry: webappfordemo.azurecr.io
-        #  context: .
-        #  file: ./Dockerfile
-        #  tags: thewebappcontainer:latest #$(date +%s)
+    #  - name: ARC Push
+     #   run: docker push webappfordemo/thewebappcontainer:latest #$(date +%s)
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          registry: webappfordemo.azurecr.io
+          context: .
+          file: ./Dockerfile
+          tags: thewebappcontainer:latest 
+      #$(date +%s)
       
          
