@@ -27,8 +27,8 @@ jobs:
       run: docker build -t thewebappcontainer:latest .
       
       
-    #  - name: ARC Push
-     #   run: docker push webappfordemo/thewebappcontainer:latest #$(date +%s)
+    - name: ARC Push
+      run: docker push webappfordemo/thewebappcontainer:$(date +%s)
 
    # - name: Build and push
     #  uses: docker/build-push-action@v3.0.0
