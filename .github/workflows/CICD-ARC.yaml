@@ -34,12 +34,12 @@ jobs:
     #  - name: ARC Push
      #   run: docker push webappfordemo/thewebappcontainer:latest #$(date +%s)
       - name: Build and push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3.0.0
         with:
-          push: true
           registry: webappfordemo.azurecr.io
           context: .
-          file: https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/master/Dockerfile?token=GHSAT0AAAAAABVLUPMZDX3NJC3UYFXBUJ2OYVYK42A
+          push: false
+          file: https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/toACR/Dockerfile?token=GHSAT0AAAAAABVLUPMYE6LV6RMTGIZBBVAUYVYLYXQ
           tags: thewebappcontainer:latest 
       #$(date +%s)
       
