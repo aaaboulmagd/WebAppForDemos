@@ -2,9 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "toACR" ]
-  pull_request:
-    branches: [ "master" ]
+ 
 
 jobs:
 
@@ -39,7 +37,7 @@ jobs:
           registry: webappfordemo.azurecr.io
           context: .
           push: false
-          file: https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/toACR/Dockerfile?token=GHSAT0AAAAAABVLUPMZA5BQJQGQ65X2QNAGYVYMWUQ
+          file: https://raw.githubusercontent.com/aaaboulmagd/WebAppForDemos/toACR/Dockerfile?token=GHSAT0AAAAAABVLUPMYQYTVKCYFPDFIGDY4YVYM7HA
           tags: thewebappcontainer:latest 
       #$(date +%s)
       
