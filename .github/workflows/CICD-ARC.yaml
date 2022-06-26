@@ -2,9 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "toACR" ]
-  pull_request:
-    branches: [ "master" ]
+ 
 
 jobs:
 
