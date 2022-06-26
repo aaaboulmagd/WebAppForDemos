@@ -38,8 +38,8 @@ jobs:
         with:
           registry: webappfordemo.azurecr.io
           context: .
-          push: true
-          file: ./WebAppForDemos/Dockerfile
+          push: false
+          file: ./Dockerfile
           tags: thewebappcontainer:latest 
       #$(date +%s)
       
