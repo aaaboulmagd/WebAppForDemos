@@ -30,4 +30,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: /webappfordemo:latest #$(date +%s)
+        tags: webappfordemo/webappfordemo:latest #$(date +%s)
