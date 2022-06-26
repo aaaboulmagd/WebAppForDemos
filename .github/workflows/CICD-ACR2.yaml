@@ -27,6 +27,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v3.0.0
       with:
+        registry: webappfordemo.azurecr.io
         context: .
         file: ./Dockerfile
         push: true
