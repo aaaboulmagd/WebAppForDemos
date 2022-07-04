@@ -1,5 +1,9 @@
 name: Docker Image CI
 
+variables:
+- name: ACR
+  value: webappfordemo.azurecr.io
+  
 on:
   push:
     branches: [ "toACR" ]
@@ -17,7 +21,7 @@ jobs:
     - name: Login to ACR
       uses: docker/login-action@v1
       with:
-        registry: webappfordemo.azurecr.io
+        registry: ${{ variables.ACR }}
         username: ${{ secrets.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
 
@@ -25,7 +29,7 @@ jobs:
       run: docker build -t thewebappcontainer:latest .
       
     - name: Tagging Img
-      run: docker tag thewebappcontainer webappfordemo.azurecr.io/thewebappcontainer:latest #$(date +%s)
+      run: docker tag thewebappcontainer ${{ variables.ACR }}/thewebappcontainer:latest #$(date +%s)
       
     - name: Pushing to ACR
-      run: docker push webappfordemo.azurecr.io/thewebappcontainer:latest #$(date +%s)
+      run: docker push ${{ variables.ACR }}/thewebappcontainer:latest #$(date +%s)
