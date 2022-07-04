@@ -25,7 +25,7 @@ jobs:
       run: docker build -t thewebappcontainer:latest .
       
     - name: Tagging Img
-      run: docker tag thewebappcontainer webappfordemo.azurecr.io/thewebappcontainer:latest #$(date +%s)
+      run: docker tag thewebappcontainer contosoorhci.azurecr.io/thewebappcontainer:latest #$(date +%s)
       
     - name: Pushing to ACR
-      run: docker push webappfordemo.azurecr.io/thewebappcontainer:latest #$(date +%s)
+      run: docker push contosoorhci.azurecr.io/thewebappcontainer:latest #$(date +%s)
