@@ -5,10 +5,7 @@ on:
     branches: [ "toACR" ]
 
 jobs:
-
-  
   build:
-
     runs-on: ubuntu-latest
 
     steps:   
