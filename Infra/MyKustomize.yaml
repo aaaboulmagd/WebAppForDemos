@@ -2,4 +2,4 @@
 metadata:
   namespace: default
 Resources:
-  - https://raw.githubusercontent.com/aaaboulmagd/AzaksTest/main/webappfordemo.yml
+  - K8Yamls/webappfordemo.yml
