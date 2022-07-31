@@ -1,3 +1,4 @@
 ---
+metadata:
 Resources:
   - K8Yamls/webappfordemo.yml
