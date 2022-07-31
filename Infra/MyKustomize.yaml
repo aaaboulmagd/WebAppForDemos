@@ -1,5 +1,3 @@
-
-metadata:
-  namespace: default
+---
 Resources:
   - K8Yamls/webappfordemo.yml
