@@ -23,7 +23,7 @@ jobs:
       run: docker build -t thewebappcontainer:latest .
       
     - name: Tagging Img
-      run: docker tag thewebappcontainer ${{ secrets.ACR }}/thewebappcontainer:latest #$(date +%s)
+      run: docker tag thewebappcontainer ${{ secrets.ACR }}/thewebappcontainer:latest
       
     - name: Pushing to ACR
-      run: docker push ${{ secrets.ACR }}/thewebappcontainer:latest #$(date +%s)
+      run: docker push ${{ secrets.ACR }}/thewebappcontainer:latest
